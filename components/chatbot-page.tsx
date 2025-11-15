@@ -54,7 +54,8 @@ export function ChatbotPage({ userName, onLogout }: ChatbotPageProps) {
     setIsLoading(true)
 
     try {
-      const response = await fetch("/api/chat", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://prresso.store"
+      const response = await fetch(`${apiUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
