@@ -43,13 +43,13 @@ export function SignupPage({ onSignup, onBackToLogin }: SignupPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-80 h-80 bg-primary rounded-full mix-blend-screen filter blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent rounded-full mix-blend-screen filter blur-3xl"></div>
       </div>
 
-      <Card className="w-full max-w-md relative z-10 border-border/50 bg-card/80 backdrop-blur">
+      <Card className="w-full max-w-md relative z-10 border-border/50 bg-card/95 backdrop-blur">
         <div className="p-8">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-2">Perso.ai</h1>

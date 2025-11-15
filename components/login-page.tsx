@@ -31,13 +31,13 @@ export function LoginPage({ onLogin, onSwitchToSignup }: LoginPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-80 h-80 bg-primary rounded-full mix-blend-screen filter blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent rounded-full mix-blend-screen filter blur-3xl"></div>
       </div>
 
-      <Card className="w-full max-w-md relative z-10 border-border/50 bg-card/80 backdrop-blur">
+      <Card className="w-full max-w-md relative z-10 border-border/50 bg-card/95 backdrop-blur">
         <div className="p-8">
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-2">
@@ -79,14 +79,13 @@ export function LoginPage({ onLogin, onSwitchToSignup }: LoginPageProps) {
             <Button
               type="submit"
               disabled={isLoading || !email || !password}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
             >
               {isLoading ? "로그인 중..." : "로그인"}
             </Button>
           </form>
 
           <div className="mt-6 pt-6 border-t border-border/30 space-y-3">
-            <p className="text-xs text-muted-foreground text-center">데모 계정: test@example.com / password</p>
             <Button
               type="button"
               onClick={onSwitchToSignup}
