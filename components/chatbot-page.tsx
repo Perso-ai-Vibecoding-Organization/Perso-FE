@@ -24,7 +24,7 @@ export function ChatbotPage({ userName, onLogout }: ChatbotPageProps) {
     {
       id: "1",
       type: "bot",
-      content: `안녕하세요! Perso.ai입니다. 저는 AI 영상 더빙 플랫폼에 대해 도와드릴 수 있습니다. 어떤 것을 알고 싶으세요?`,
+      content: `안녕하세요! Perso.ai 입니다. 어떤 것을 알고 싶으세요?`,
     },
   ])
   const [input, setInput] = useState("")
@@ -58,7 +58,7 @@ export function ChatbotPage({ userName, onLogout }: ChatbotPageProps) {
       const response = await fetch(`${apiUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ question: input }),
       })
 
       if (!response.ok) throw new Error("API error")
