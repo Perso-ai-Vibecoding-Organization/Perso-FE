@@ -68,7 +68,7 @@ export function ChatbotPage({ userName, onLogout }: ChatbotPageProps) {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: "bot",
-        content: data.reply,
+        content: data.answer,
       }
 
       setMessages((prev) => [...prev, botMessage])
