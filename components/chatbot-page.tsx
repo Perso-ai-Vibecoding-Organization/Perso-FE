@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Send, LogOut, Loader } from "lucide-react"
@@ -94,7 +95,16 @@ export function ChatbotPage({ userName, onLogout }: ChatbotPageProps) {
         <div className="border-b border-border/30 bg-card/40 backdrop-blur-md">
           <div className="flex items-center justify-between p-4 md:p-6">
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-foreground">Perso.ai</h1>
+              <div className="flex items-center gap-2 mb-1">
+                <Image
+                  src="/perso.png"
+                  alt="Perso.ai Logo"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+                <h1 className="text-xl md:text-2xl font-bold text-foreground">Perso.ai</h1>
+              </div>
               <p className="text-xs md:text-sm text-muted-foreground">AI 영상 더빙 어시스턴트</p>
             </div>
             <div className="flex items-center gap-3">

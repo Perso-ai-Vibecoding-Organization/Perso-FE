@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
@@ -39,7 +40,16 @@ export function LoginPage({ onLogin, onSwitchToSignup }: LoginPageProps) {
       <Card className="w-full max-w-md relative z-10 border-border/50 bg-card/80 backdrop-blur">
         <div className="p-8">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-foreground mb-2">Perso.ai</h1>
+            <div className="flex items-center gap-3 mb-2">
+              <Image
+                src="/perso.png"
+                alt="Perso.ai Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+              <h1 className="text-3xl font-bold text-foreground">Perso.ai</h1>
+            </div>
             <p className="text-muted-foreground text-sm">AI 영상 더빙 플랫폼에 오신 것을 환영합니다</p>
           </div>
 
